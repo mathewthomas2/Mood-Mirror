@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 1.3em;
+    background-color:white;
+    transition: background-color 0.5s ease; 
+}
+
+.container{
+    position: absolute;
+    top: 65px;
+    text-align: center;
+    max-width: 500px;
+    min-width: 350px;
+    height:590px ;
+    width: 90%;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(227, 227, 227, 0.997);
+    margin: 5px;
+    transition: all .5s ease;
+    background-color: white;
+}
+.container:hover{
+    box-shadow: 0 5px 20px rgb(173, 172, 172);
+}
+h1{
+    padding:20px 0 5px 0;
+    font-weight: 500;
+}
+
+p{
+    padding: 10px 0;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+.moods{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+button{
+    padding:13px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: 120px;
+    background-color:#6158ff;
+    color: white;
+    border: none;
+    transition: all .5s ease;
+    cursor:pointer;
+}
+button:hover{
+    background-color: #4138ec;
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px #9692ec;
+}
+
+.quote {
+    margin: 30px 20px 20px 20px;
+    padding: 25px;
+    border-radius: 15px;
+    border: 3px solid rgb(236, 236, 236);
+    animation: slideIn 0.6s ease-out;
+    display: none;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#moodTitle {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#moodQuote {
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: rgb(85, 85, 85);
+    font-style: italic;
+    background-color: rgba(222, 222, 224, 0.732);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 10px;
+    height: 650px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .moods{
+    padding:5px 5px;
+  }
+  .quote{
+    margin: 5px 20px;
+  }
+}
